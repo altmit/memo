@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import Layout from './component/Layout';
+import MemoList from "./component/MemoList";
+import InputMemo from "./component/InputMemo"
+import MemoView from './component/MemoView';
 
-function App() {
+import './App.css'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<MemoList />} />
+        <Route path='/add' element={<InputMemo />} />
+        <Route path='/edit/:id' element={<InputMemo />} />
+        <Route path='/memo/:id' element={<MemoView />} />
+      </Route>
+    </Routes>
+  
+  )
 }
 
 export default App;

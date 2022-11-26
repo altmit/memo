@@ -1,0 +1,21 @@
+.list {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #E4E3E9;
+}
+
+.listDiv {
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
